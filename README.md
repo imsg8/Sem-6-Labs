@@ -7,16 +7,20 @@ Welcome to the MIT CSE Sem-6 Lab Repository of Shivang Gulati! This repository c
 ### 🖥️ Parallel Computer Architecture and Programming Lab
 
 - **Description:** This section includes code and exercises related to Operating Systems. 
-- **Update Schedule:** Updates will be made every **Monday**.
-- **Download OS Lab Folder:** [Download OS Lab](https://downgit.evecalm.com/#/home?url=https://github.com/imsg8/Sem-5-Labs/tree/main/OS%20Lab)
+- **Update Schedule:** Updates will be made every **Monday**. 
+- **Download OS Lab Folder:** [Download PCAP Lab](https://downgit.evecalm.com/#/home?url=https://github.com/imsg8/Sem-6-Labs/tree/main/PCAP%20Lab)
 
 ### 🌐 Web Programming Lab
 
-- **Description:** This section features code and exercises focused on Computer Networks.
+- **Description:** This section features code and exercises focused on Web Programming.
 - **Update Schedule:** Updates will be made every **Thursday**.
-- **Download CN Lab Folder:** [Download CN Lab](https://downgit.evecalm.com/#/home?url=https://github.com/imsg8/Sem-5-Labs/tree/main/CN%20Lab)
+- **Download CN Lab Folder:** [Download WP Lab](https://downgit.evecalm.com/#/home?url=)
 
-## Compiler Design Lab
+### 📝 Compiler Design Lab
+
+- **Description:** This section features code and exercises focused on Compiler Design.
+- **Update Schedule:** Updates will be made every **Thursday**.
+- **Download CN Lab Folder:** [Download CD Lab](https://downgit.evecalm.com/#/home?url=)
 
 ## Getting Started - Clone this repository!
 
