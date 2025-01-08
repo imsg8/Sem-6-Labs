@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Table</title>
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 4px;
+    font-size: 12px;
+  }
+  table {
+    width: 60%;
+    margin: 0 auto;
+  }
+  th {
+    background-color: lightcoral;
+    text-align: center;
+    font-weight: bold;
+  }
+  td {
+    text-align: center;
+  }
+  td:nth-child(1) {
+    background-color: aqua;
+  }
+  td:nth-child(2) {
+    background-color: green;
+  }
+  th[colspan="2"] {
+    text-align: center;
+  }
+  td[rowspan="3"] {
+    background-color: yellow;
+  }
+</style>
+</head>
+<body>
+<h1 style="text-align: center;">Table</h1>
+<table id="data-table">
+<thead>
+  <tr>
+    <th>Country</th>
+    <th colspan="2">Population (In Crores)</th>
+  </tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+<script>
+const data = [
+  { country: "India", year: 1998, population: 85 },
+  { country: "India", year: 1999, population: 80 },
+  { country: "India", year: 2000, population: 10 },
+  { country: "USA", year: 1998, population: 30 },
+  { country: "USA", year: 1999, population: 35 },
+  { country: "USA", year: 2000, population: 40 },
+  { country: "UK", year: 1998, population: 25 },
+  { country: "UK", year: 1999, population: 30 },
+  { country: "UK", year: 2000, population: 35 }
+];
+
+function populateTable() {
+  const tableBody = document.getElementById('data-table').getElementsByTagName('tbody')[0];
+  let currentCountry = '';
+
+  data.forEach((item, index) => {
+
+    if (item.country !== currentCountry) {
+      currentCountry = item.country;
+      const row = tableBody.insertRow();
+      const cell = row.insertCell(0);
+
+      cell.rowSpan = 3;
+      cell.style.backgroundColor = 'yellow';
+      cell.textContent = item.country;
+
+      const yearCell = row.insertCell(1);
+      yearCell.style.backgroundColor = 'aqua';
+      yearCell.textContent = item.year;
+
+      const populationCell = row.insertCell(2);
+      populationCell.style.backgroundColor = 'green';
+      populationCell.textContent = item.population;
+    } else {
+      const row = tableBody.insertRow();
+      const yearCell = row.insertCell(0);
+      yearCell.style.backgroundColor = 'aqua';
+      yearCell.textContent = item.year;
+
+      const populationCell = row.insertCell(1);
+      populationCell.style.backgroundColor = 'green';
+      populationCell.textContent = item.population;
+    }
+  });
+}
+
+populateTable();
+</script>
+</body>
+</html>

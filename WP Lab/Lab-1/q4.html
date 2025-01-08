@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Table</title>
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  table {
+    width: 50%;
+    margin: 0 auto;
+  }
+  th, td {
+    text-align: center;
+  }
+  th {
+    font-weight: bold;
+  }
+  td {
+    font-size: 14px;
+  }
+  tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+</style>
+</head>
+<body>
+<h1 style="text-align: center;">Table</h1>
+<table>
+  <tr style="background-color: lightcoral;">
+    <td>Country</td>
+    <td colspan="2">Population (In Crores)</td>
+  </tr>
+  <tr>
+    <th rowspan="3" style="background-color: yellow;">India</th>
+    <td style="background-color: aqua;">1998</td>
+    <td style="background-color: green;">85</td>
+  </tr>
+  <tr>
+    <td style="background-color: aqua;">1999</td>
+    <td style="background-color: green;">80</td>
+  </tr>
+  <tr>
+    <td style="background-color: aqua;">2000</td>
+    <td style="background-color: green;">10</td>
+  </tr>
+  <tr>
+    <th rowspan="3" style="background-color: yellow;">USA</th>
+    <td style="background-color: aqua;">1998</td>
+    <td style="background-color: green;">30</td>
+  </tr>
+  <tr>
+    <td style="background-color: aqua;">1999</td>
+    <td style="background-color: green;">35</td>
+  </tr>
+  <tr>
+    <td style="background-color: aqua;">2000</td>
+    <td style="background-color: green;">40</td>
+  </tr>
+  <tr>
+    <th rowspan="3" style="background-color: yellow;">UK</th>
+    <td style="background-color: aqua;">1998</td>
+    <td style="background-color: green;">25</td>
+  </tr>
+  <tr>
+    <td style="background-color: aqua;">1999</td>
+    <td style="background-color: green;">30</td>
+  </tr>
+  <tr>
+    <td style="background-color: aqua;">2000</td>
+    <td style="background-color: green;">35</td>
+  </tr>
+</table>
+</body>
+</html>
