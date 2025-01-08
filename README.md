@@ -14,13 +14,13 @@ Welcome to the MIT CSE Sem-6 Lab Repository of Shivang Gulati! This repository c
 
 - **Description:** This section features code and exercises focused on Web Programming.
 - **Update Schedule:** Updates will be made every **Thursday**.
-- **Download CN Lab Folder:** [Download WP Lab](https://downgit.evecalm.com/#/home?url=)
+- **Download CN Lab Folder:** [Download WP Lab](https://downgit.evecalm.com/#/home?url=https://github.com/imsg8/Sem-6-Labs/tree/main/WP%20Lab)
 
 ### 📝 Compiler Design Lab
 
 - **Description:** This section features code and exercises focused on Compiler Design.
 - **Update Schedule:** Updates will be made every **Thursday**.
-- **Download CN Lab Folder:** [Download CD Lab](https://downgit.evecalm.com/#/home?url=)
+- **Download CN Lab Folder:** [Download CD Lab](https://downgit.evecalm.com/#/home?url=https://github.com/imsg8/Sem-6-Labs/tree/main/CD%20Lab)
 
 ## Getting Started - Clone this repository!
 
