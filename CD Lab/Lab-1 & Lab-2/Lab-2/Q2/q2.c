@@ -23,7 +23,6 @@ int main() {
 		else if(c == '#') {
 			while(c != '\n')
 				c = getc(fi);
-			// putc(c, fo);
 		}
 		else putc(c, fo);
 		c = getc(fi);
