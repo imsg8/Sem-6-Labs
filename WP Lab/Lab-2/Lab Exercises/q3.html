@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Bootstrap Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f7f6;
+        }
+
+        .section {
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .top-section {
+            background-color: #4e73df;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .bottom-section {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-custom {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-custom:hover {
+            background-color: #218838;
+        }
+
+        .btn-info-custom {
+            background-color: #17a2b8;
+            color: white;
+        }
+
+        .btn-info-custom:hover {
+            background-color: #138496;
+        }
+
+        .btn-danger-custom {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .btn-danger-custom:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section top-section text-center">
+            <h1>Welcome!</h1>
+            <p>This is a modern Bootstrap layout with updated colors.</p>
+            <input type="text" class="form-control mb-3" placeholder="Enter your name">
+            <button class="btn btn-custom">Submit</button>
+        </div>
+
+        <div class="section bottom-section">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Part 1</h5>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary">Button 1</button>
+                        <button type="button" class="btn btn-secondary">Button 2</button>
+                        <button type="button" class="btn btn-success">Button 3</button>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Part 2</h5>
+                    <input type="text" class="form-control mb-3" placeholder="Enter your email">
+                    <button class="btn btn-info-custom">Submit Email</button>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Part 3</h5>
+                    <button class="btn btn-danger-custom">Click Me!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

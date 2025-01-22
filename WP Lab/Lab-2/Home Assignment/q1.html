@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f1f3f5;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #007bff;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+        .form-control {
+            border-radius: 5px;
+        }
+        .form-check-label {
+            color: #555;
+        }
+        .form-check-input {
+            width: 1.3em;
+            height: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Train Ticket Booking Form</h1>
+        <form>
+            <div class="form-group">
+                <label for="passengerName">Passenger Name</label>
+                <input type="text" class="form-control" id="passengerName" placeholder="Enter full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+            </div>
+            <div class="form-group">
+                <label for="contactNumber">Contact Number</label>
+                <input type="tel" class="form-control" id="contactNumber" placeholder="Enter contact number" required>
+            </div>
+            <div class="form-group">
+                <label for="journeyDate">Date of Journey</label>
+                <input type="date" class="form-control" id="journeyDate" required>
+            </div>
+            <div class="form-group">
+                <label for="train">Select Train</label>
+                <select class="form-control" id="train" required>
+                    <option value="" disabled selected>Select a train</option>
+                    <option value="train1">Express Train</option>
+                    <option value="train2">Superfast Train</option>
+                    <option value="train3">Local Train</option>
+                    <option value="train4">Sleeper Train</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="class">Class</label>
+                <select class="form-control" id="class" required>
+                    <option value="" disabled selected>Select class</option>
+                    <option value="first">First Class</option>
+                    <option value="second">Second Class</option>
+                    <option value="sleeper">Sleeper Class</option>
+                    <option value="general">General</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="d-flex">
+                    <div class="form-check mr-3">
+                        <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" required>
+                        <label class="form-check-label" for="genderMale">Male</label>
+                    </div>
+                    <div class="form-check mr-3">
+                        <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female" required>
+                        <label class="form-check-label" for="genderFemale">Female</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="genderOther" value="other" required>
+                        <label class="form-check-label" for="genderOther">Other</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tickets">Number of Tickets</label>
+                <input type="number" class="form-control" id="tickets" placeholder="Enter number of tickets" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="specialRequests">Special Requests (Optional)</label>
+                <textarea class="form-control" id="specialRequests" rows="3" placeholder="Enter any special requests"></textarea>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="terms" required>
+                <label class="form-check-label" for="terms">I agree to the terms and conditions</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-4">Book Tickets</button>
+        </form>
+    </div>
+</body>
+</html>

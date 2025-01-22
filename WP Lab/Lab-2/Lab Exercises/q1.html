@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Bio-data Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<body style="background-color: #f0f8ff;">
+    <h1 style="text-align: center; color: #2c3e50;">Enter Student Bio-Data</h1>
+
+    <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+        <form>
+            <div class="form-group">
+                <label for="InputEmail" style="color: #34495e;">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="BloodType" style="color: #34495e;">Blood Type</label>
+                <select class="form-control" id="BloodType" required>
+                    <option value="" disabled selected>Select Blood Type</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label style="color: #34495e;">Gender</label>
+                <div class="d-flex justify-content-center">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" required>
+                        <label class="form-check-label" for="genderMale">Male</label>
+                    </div>
+                    <div class="form-check mx-3">
+                        <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female" required>
+                        <label class="form-check-label" for="genderFemale">Female</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="genderOther" value="other" required>
+                        <label class="form-check-label" for="genderOther">Other</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="Height" style="color: #34495e;">Height</label>
+                    <input type="number" class="form-control" id="Height" placeholder="Height">
+                </div>
+                <div class="form-group">
+                    <label for="Weight" style="color: #34495e;">Weight</label>
+                    <input type="number" class="form-control" id="Weight" placeholder="Weight">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="Allergies" style="color: #34495e;">Allergies</label>
+                <input type="text" class="form-control" id="Allergies" placeholder="Allergies">
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="Confirm">Checking this box means you confirm the data</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Blood Type Reference</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Blood Type</th>
+                    <th>Characteristics</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A+</td>
+                    <td>Can receive A+, A-, O+, O- blood.</td>
+                </tr>
+                <tr>
+                    <td>A-</td>
+                    <td>Can receive A-, O- blood.</td>
+                </tr>
+                <tr>
+                    <td>B+</td>
+                    <td>Can receive B+, B-, O+, O- blood.</td>
+                </tr>
+                <tr>
+                    <td>B-</td>
+                    <td>Can receive B-, O- blood.</td>
+                </tr>
+                <tr>
+                    <td>AB+</td>
+                    <td>Universal recipient; can receive all blood types.</td>
+                </tr>
+                <tr>
+                    <td>AB-</td>
+                    <td>Can receive AB-, A-, B-, O- blood.</td>
+                </tr>
+                <tr>
+                    <td>O+</td>
+                    <td>Can receive O+, O- blood.</td>
+                </tr>
+                <tr>
+                    <td>O-</td>
+                    <td>Universal donor; can only receive O- blood.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
