@@ -1,0 +1,9 @@
+1. Write a single MPI program to find out pow(x, rank) for all the processes where 'x' is the integer constant and 'rank' is the rank of the process.
+
+2. Write a program in MPI where even ranked process prints "Hello" and odd ranked process prints "World".
+
+3. Write a program in MPI to stimulate simple calculator. perform each operation using different process in parallel.
+
+4. Write a program in MPI to toggle character of a given string indexed by rank of the process. Hint: Suppose the string is "HeLLO" and there are 5 processes, then process 0 toggles 'H' to 'h', process 1 toggles 'e' to 'E' and so on.
+
+5. Write a program in MPI where even ranked process prints factorial of the rank and odd ranked process prints rank's Fibonacci number.
