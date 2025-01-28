@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+    }
+
+    .calculator {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 310px;
+    }
+
+    input[type="text"] {
+      width: 93%;
+      height: 40px;
+      font-size: 24px;
+      padding: 10px;
+      margin-bottom: 10px;
+      text-align: right;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
+      margin: 5px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+    }
+
+    button:empty {
+      background-color: #ffffff;  
+    }
+
+    .button-wide {
+      grid-column: span 2;
+    }
+
+    #clear {
+      background-color: #f44336;
+    }
+
+    #clear:hover {
+      background-color: #d32f2f;
+    }
+
+    #equal {
+      background-color: #2196F3;
+    }
+
+    #equal:hover {
+      background-color: #1976D2;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      let currentInput = '';
+      let previousInput = '';
+      let operator = '';
+
+      $('.button').click(function() {
+        let buttonValue = $(this).text();
+
+        if (buttonValue === 'AC') {
+          currentInput = '';
+          previousInput = '';
+          operator = '';
+          $('#display').val('');
+        } else if (buttonValue === '=') {
+          if (previousInput !== '' && currentInput !== '') {
+            currentInput = eval(previousInput + operator + currentInput).toString();
+            $('#display').val(currentInput);
+            previousInput = '';
+            operator = '';
+          }
+        } else if (buttonValue === '+' || buttonValue === '-' || buttonValue === '*' || buttonValue === '/') {
+          if (currentInput !== '') {
+            previousInput = currentInput;
+            operator = buttonValue;
+            currentInput = '';
+          }
+        } else {
+          currentInput += buttonValue;
+          $('#display').val(currentInput);
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <div class="calculator">
+    <input type="text" id="display" readonly>
+    <div class="buttons">
+      <button class="button" id="clear">AC</button>
+      <button class="button:empty"></button>
+      <button class="button:empty"></button>
+      <button class="button:empty"></button>
+      <button class="button">7</button>
+      <button class="button">8</button>
+      <button class="button">9</button>
+      <button class="button">/</button>
+      <button class="button">4</button>
+      <button class="button">5</button>
+      <button class="button">6</button>
+      <button class="button">*</button>
+      <button class="button">1</button>
+      <button class="button">2</button>
+      <button class="button">3</button>
+      <button class="button">-</button>
+      <button class="button">0</button>
+      <button class="button">.</button>
+      <button class="button">+</button>
+      <button class="button" id="equal">=</button>
+    </div>
+  </div>
+
+</body>
+</html>

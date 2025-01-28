@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table and Image Animation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    #container {
+      position: relative;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #ffffff;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .move-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#moveBtn').click(function() {
+        $('#container').animate({
+          left: '-300px'
+        }, 2000);
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <div id="container" class="move-container" style="position: relative; left: 0;">
+    <table>
+      <thead>
+        <tr>
+          <th>Header 1</th>
+          <th>Header 2</th>
+          <th>Header 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Row 1, Col 1</td>
+          <td>Row 1, Col 2</td>
+          <td>Row 1, Col 3</td>
+        </tr>
+        <tr>
+          <td>Row 2, Col 1</td>
+          <td>Row 2, Col 2</td>
+          <td>Row 2, Col 3</td>
+        </tr>
+        <tr>
+          <td>Row 3, Col 1</td>
+          <td>Row 3, Col 2</td>
+          <td>Row 3, Col 3</td>
+        </tr>
+      </tbody>
+    </table>
+    <img src="q1.jpg" alt="Sample Image">
+  </div>
+
+  <button id="moveBtn">Move</button>
+
+</body>
+</html>
