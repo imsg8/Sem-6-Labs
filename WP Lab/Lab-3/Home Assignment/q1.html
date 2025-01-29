@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile & Laptop Billing</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#produceBill").click(function () {
+                let brand = $("#brand").val();
+                let quantity = parseInt($("#quantity").val());
+                let total = 0;
+                
+                // Define prices
+                let prices = {
+                    'HP': { 'Mobile': 200, 'Laptop': 800 },
+                    'Nokia': { 'Mobile': 150, 'Laptop': 700 },
+                    'Samsung': { 'Mobile': 300, 'Laptop': 900 },
+                    'Motorola': { 'Mobile': 180, 'Laptop': 750 },
+                    'Apple': { 'Mobile': 1000, 'Laptop': 2000 }
+                };
+                
+                $("input[name='device']:checked").each(function () {
+                    let device = $(this).val();
+                    total += (prices[brand][device] * quantity);
+                });
+                
+                alert("Total Amount: $" + total);
+            });
+        });
+    </script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Generate Bill</h2>
+    <label for="brand">Select Brand:</label>
+    <select id="brand">
+        <option value="HP">HP</option>
+        <option value="Nokia">Nokia</option>
+        <option value="Samsung">Samsung</option>
+        <option value="Motorola">Motorola</option>
+        <option value="Apple">Apple</option>
+    </select>
+    <br><br>
+    <label>Choose Device:</label><br>
+    <input type="checkbox" name="device" value="Mobile"> Mobile
+    <br><br>
+    <input type="checkbox" name="device" value="Laptop"> Laptop 
+    <br><br><br>
+    <label for="quantity">Enter Quantity:</label>
+    <input type="number" id="quantity" min="1" value="1">
+    <br><br>
+    <button id="produceBill">Produce Bill</button>
+</body>
+</html>
