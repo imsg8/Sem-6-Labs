@@ -1,4 +1,4 @@
-Credits: Tejinder Pokuri
+// Credits: Tejinder Pokuri
 
 #include<stdio.h>
 
