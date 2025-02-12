@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Student Information</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Student Information Form</h2>
+        <form method="POST">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="Name">Full Name</label>
+                <input type="text" class="form-control" id="Name" name="Name" placeholder="Enter full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="DOB">Date of Birth</label>
+                <input type="date" class="form-control" id="DOB" name="DOB" required>
+            </div>
+
+            <div class="form-group">
+                <label for="add">Address</label>
+                <input type="text" class="form-control" id="add" name="address" placeholder="Enter address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="no">Contact Number</label>
+                <input type="tel" class="form-control" id="no" name="contact_number" placeholder="Enter contact number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="en">English Marks</label>
+                <input type="number" class="form-control" id="en" name="english_marks" placeholder="Enter English marks" required min="0" max="100">
+            </div>
+
+            <div class="form-group">
+                <label for="phy">Physics Marks</label>
+                <input type="number" class="form-control" id="phy" name="physics_marks" placeholder="Enter Physics marks" required min="0" max="100">
+            </div>
+
+            <div class="form-group">
+                <label for="chem">Chemistry Marks</label>
+                <input type="number" class="form-control" id="chem" name="chemistry_marks" placeholder="Enter Chemistry marks" required min="0" max="100">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <!-- <input type="text" name="temp"> -->
+        {% if stu_data %}
+            <div class="student-info">
+                <h3>Student Information</h3>
+                <ul>
+                    <li><strong>Name:</strong> {{ name }}</li>
+                    <li><strong>Date of Birth:</strong> {{ dob }}</li>
+                    <li><strong>Address:</strong> {{ add }}</li>
+                    <li><strong>Contact Number:</strong> {{ no }}</li>
+                    <li><strong>Email:</strong> {{ email }}</li>
+                    <li><strong>English Marks:</strong> {{ eng }}</li>
+                    <li><strong>Physics Marks:</strong> {{ phy }}</li>
+                    <li><strong>Chemistry Marks:</strong> {{ chem }}</li>
+                    <li><strong>Total Percentage:</strong> {{ per }}%</li>
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
