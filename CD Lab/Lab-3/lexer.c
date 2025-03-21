@@ -150,24 +150,25 @@ tk getNextToken(FILE* fp) {
                 if (nextChar == '=') {
                     token.token_name[1] = nextChar;
                     token.token_name[2] = '\0';
-
-                    if (c == '=') strcpy(token.token_type, "EQUALS");
-                    if (c == '<') strcpy(token.token_type, "LESSTHAN_EQ");
-                    if (c == '>') strcpy(token.token_type, "GREATERTHAN_EQ");
-                    if (c == '!') strcpy(token.token_type, "NOT_EQ");
+		if (c == '=') strcpy(token.token_type, "EQUALS");
+		if (c == '<') strcpy(token.token_type, "LESSTHAN_EQ");
+		if (c == '>') strcpy(token.token_type, "GREATERTHAN_EQ");
+		if (c == '!') strcpy(token.token_type, "NOT_EQ");
 
                     return token;
-                } else {
-                    ungetc(nextChar, fp);
-                    col--;
-                    token.token_name[1] = '\0';
-                    if(c=='=') strcpy(token.token_type,"=");
-                    if (c == '<') strcpy(token.token_type, "LESSTHAN");
-                    if (c == '>') strcpy(token.token_type, "GREATERTHAN");
-                    if (c == '!') strcpy(token.token_type, "NOT");
-                    return token;
+            }
+	    else{
+	    	ungetc(nextChar, fp);
+	    	col--;
+	    	token.token_name[1] = '\0';
+	    	if(c=='=') strcpy(token.token_type,"=");
+	    	if (c == '<') strcpy(token.token_type, "LESSTHAN");
+	    	if (c == '>') strcpy(token.token_type, "GREATERTHAN");
+	    	if (c == '!') strcpy(token.token_type, "NOT");
+	    		return token;
                 }
-            }else{
+            }
+	    else{
                 token.token_name[1] = '\0';
                 token.token_type[0] = c;
                 token.token_type[1] = '\0';
