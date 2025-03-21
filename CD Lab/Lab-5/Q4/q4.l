@@ -1,5 +1,5 @@
 %{
-    #include <stdio.h>
+#include <stdio.h>
 int sf = 0;
 int pf = 0;
 %}
