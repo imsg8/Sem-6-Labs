@@ -55,9 +55,6 @@ int main() {
  
     Scan<<<numBlocks, BLOCK_SIZE>>>(d_in, d_out, d_blockSums, N);
  
-   
-   
- 
     addBlockOffsets<<<numBlocks, BLOCK_SIZE>>>(d_out, d_blockSums, N);
  
     cudaMemcpy(h_out, d_out, N * sizeof(int), cudaMemcpyDeviceToHost);
