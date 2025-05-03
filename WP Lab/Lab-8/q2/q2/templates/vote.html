@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote for Book Rating</title>
+</head>
+<body>
+    <h1>How is the book "ASP.NET with C# by Vipul Prakashan?"</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label>
+            <input type="radio" name="choice" value="Good"> Good
+        </label><br>
+        <label>
+            <input type="radio" name="choice" value="Satisfactory"> Satisfactory
+        </label><br>
+        <label>
+            <input type="radio" name="choice" value="Bad"> Bad
+        </label><br><br>
+
+        <button type="submit">Vote</button>
+    </form>
+
+    <h2>Current Results:</h2>
+    <p>Good: {{ results.Good }}%</p>
+    <p>Satisfactory: {{ results.Satisfactory }}%</p>
+    <p>Bad: {{ results.Bad }}%</p>
+</body>
+</html>

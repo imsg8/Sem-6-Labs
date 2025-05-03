@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People in Company</title>
+</head>
+<body>
+    <h1>Search People Working at a Company</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="company_name">Company Name:</label>
+        <input type="text" name="company_name" required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if people %}
+        <h2>People working at {{ company_name }}:</h2>
+        <ul>
+        {% for person in people %}
+            <li>{{ person.person_name }} - {{ person.salary }} (City: {{ person.lives_set.first.city }})</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

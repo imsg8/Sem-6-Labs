@@ -1,0 +1,19 @@
+<!-- directory/templates/directory/page_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ category.name }} - Pages</title>
+</head>
+<body>
+    <h1>Pages in {{ category.name }}</h1>
+    <a href="{% url 'add_page' %}">Add Page</a><br><br>
+    <ul>
+        {% for page in pages %}
+            <li>
+                <a href="{{ page.url }}" target="_blank">{{ page.title }}</a> (Views: {{ page.views }})
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
